@@ -8,13 +8,19 @@ Inspired by [ruby koans](http://rubykoans.com/) you may learn the syntax and pra
 
 The test are written in the [Criterion](https://github.com/Snaipe/Criterion) unit testing library.
 
+## Solutions
+
+Progress is tracked under [Sections](#sections)!
+
+To simplify the process, I have included a [bash script](test) to test your answers.
+
+
 ## How to run
 
 ### On Linux/OSX:
 
 1. Install [Criterion](https://github.com/Snaipe/Criterion)
-2. run `make clean all`
-3. run `bin/c_koans`
+2. Run `test` in the base directory
 4. Start fixing!
 
 ### On Windows:
@@ -40,16 +46,16 @@ Inside `src/` you will find a file for each of the following topics in C:
 - Linked List Project
 
 The recommended order for fixing the tests is:
-- about_basics.c
-- about_control_statements.c
-- about_functions.c
-- about_pointers.c
-- about_malloc.c
-- about_arrays.c
-- about_strings.c
-- about_structs.c
-- about_dataclasses.c
-- about_printing.c
-- about_io.c
-- about_linked_lists.c
-- about_preprocessor.c
+- about_basics.c ✔️
+- about_control_statements.c ✔️
+- about_functions.c ✔️
+- about_pointers.c ✔️
+- about_malloc.c ❌
+- about_arrays.c ❌
+- about_strings.c ❌
+- about_structs.c ❌
+- about_dataclasses.c ❌
+- about_printing.c ❌
+- about_io.c ❌
+- about_linked_lists.c ❌
+- about_preprocessor.c ❌

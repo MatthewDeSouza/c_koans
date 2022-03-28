@@ -1,0 +1,28 @@
+#!/bin/env sh
+
+ABSPATH=$(dirname "$0")
+ABSPATH=$(cd "$ABSPATH" && pwd)
+cd $ABSPATH
+
+if [ $1 ]; then     
+    if [ $1 == "-v" ] || [ $1 == "--verbose" ] || [ $1 == "v" ]; then
+        make clean all -d
+        echo
+    fi
+fi
+
+make clean all > /dev/null
+
+if [ $? -ne 0 ]; then
+    echo "make error detected (exit code $?)"
+    PS3="1 or 2) "
+    select opt in "Continue" "Exit"; do
+        case $opt in
+            Continue ) break;;
+            Exit ) exit 1;;
+        esac
+    done
+fi
+
+chmod +x ./bin/c_koans
+./bin/c_koans
